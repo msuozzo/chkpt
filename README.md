@@ -13,7 +13,7 @@ It features...
 
 ## How
 
-#### Defining a `Stage`
+### Defining a `Stage`
 
 `Stage`s are the atomic units of work in `chkpt` and correspond to single Python functions. Existing functions need only use a decorator `@chkpt.Stage.wrap()` to be used as a `Stage`:
 
@@ -37,7 +37,7 @@ def stage2(stage1_input):
   return [stage1_input, "456"]
 ```
 
-#### Defining a `Pipeline`
+### Defining a `Pipeline`
 
 `Pipeline`s define the excution graph of `Stage`s to be run. `Stage`s are combined with shift operators (`<<` and `>>`) to direct the dataflow:
 
@@ -58,7 +58,7 @@ result2 = (result1, stage1) >> stage4
 pipeline = result2 >> stage5
 ```
 
-#### Executing a `Pipeline`
+### Executing a `Pipeline`
 
 `Pipeline`s can be directly executed which will use the default config settings:
 
@@ -73,7 +73,7 @@ The defaults can be configured by passing a `Config` instance:
 result = pipeline(chkpt.Config(store=True, load=True, dir='/tmp'))
 ```
 
-#### Examples
+### Examples
 
 For detailed usage, see the [examples/]() directory.
 
