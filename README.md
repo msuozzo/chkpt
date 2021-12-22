@@ -75,7 +75,7 @@ result = pipeline(chkpt.Config(store=True, load=True, dir='/tmp'))
 
 ### Examples
 
-For detailed usage, see the [examples/]() directory.
+For detailed usage, see the [](examples/) directory.
 
 The following is a brief example pipeline:
 
